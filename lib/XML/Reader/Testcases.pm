@@ -2,14 +2,13 @@ use strict;
 use warnings;
 
 package XML::Reader::Testcases;
-
+$XML::Reader::Testcases::VERSION = '0.65';
 require Exporter;
 
 our @ISA         = qw(Exporter);
 our %EXPORT_TAGS = ( all => [ qw(Get_TestCntr Get_TestProg) ] );
 our @EXPORT_OK   = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT      = qw();
-our $VERSION     = '0.64';
 
 our %TestProg;
 
@@ -1904,8 +1903,8 @@ $TestProg{'0030_test_Module.t'} = [29, sub {
 
 {
     package DebCnt;
-
-    sub new     { our $obj++; bless {}; }
+$DebCnt::VERSION = '0.65';
+sub new     { our $obj++; bless {}; }
     sub DESTROY { our $obj--; }
 }
 
